@@ -812,6 +812,30 @@ using scramblerate = parameter::chain<scramblerate_InputRange,
                                       scramblerate_3<NV>, 
                                       scramblerate_4<NV>>;
 
+DECLARE_PARAMETER_RANGE(Space1_InputRange, 
+                        0., 
+                        0.25);
+
+template <int NV>
+using Space1 = parameter::chain<Space1_InputRange, 
+                                parameter::plain<higain_impl::xfader3_t<NV>, 0>>;
+
+DECLARE_PARAMETER_RANGE(Space2_InputRange, 
+                        0., 
+                        0.25);
+
+template <int NV>
+using Space2 = parameter::chain<Space2_InputRange, 
+                                parameter::plain<higain_impl::xfader4_t<NV>, 0>>;
+
+DECLARE_PARAMETER_RANGE(Space3_InputRange, 
+                        0., 
+                        0.25);
+
+template <int NV>
+using Space3 = parameter::chain<Space3_InputRange, 
+                                parameter::plain<higain_impl::xfader6_t<NV>, 0>>;
+
 DECLARE_PARAMETER_RANGE_STEP(over_InputRange, 
                              1., 
                              5., 
@@ -908,15 +932,6 @@ template <int NV>
 using mix = parameter::plain<higain_impl::xfader_t<NV>, 
                              0>;
 template <int NV>
-using Space1 = parameter::plain<higain_impl::xfader3_t<NV>, 
-                                0>;
-template <int NV>
-using Space2 = parameter::plain<higain_impl::xfader4_t<NV>, 
-                                0>;
-template <int NV>
-using Space3 = parameter::plain<higain_impl::xfader6_t<NV>, 
-                                0>;
-template <int NV>
 using higain_t_plist = parameter::list<Thresh<NV>, 
                                        Attk<NV>, 
                                        Rel<NV>, 
@@ -1004,11 +1019,11 @@ template <int NV> struct instance: public higain_impl::higain_t_<NV>
             0x8000, 0x003F, 0x8000, 0x5C3F, 0x1100, 0x0000, 0x6D00, 0x7869, 
             0x0000, 0x0000, 0x0000, 0x8000, 0x003F, 0x8000, 0x003F, 0x8000, 
             0x003F, 0x0000, 0x5C00, 0x1200, 0x0000, 0x5300, 0x6170, 0x6563, 
-            0x0031, 0x0000, 0x0000, 0x0000, 0x3F80, 0x3333, 0x3F73, 0x0000, 
+            0x0031, 0x0000, 0x0000, 0x0000, 0x3E80, 0x0000, 0x3E80, 0x0000, 
             0x3F80, 0x0000, 0x0000, 0x005C, 0x0013, 0x0000, 0x7053, 0x6361, 
-            0x3265, 0x0000, 0x0000, 0x0000, 0x8000, 0xF63F, 0x5C28, 0x003F, 
+            0x3265, 0x0000, 0x0000, 0x0000, 0x8000, 0x003E, 0x0000, 0x0000, 
             0x8000, 0x003F, 0x0000, 0x5C00, 0x1400, 0x0000, 0x5300, 0x6170, 
-            0x6563, 0x0033, 0x0000, 0x0000, 0x0000, 0x3F80, 0x6666, 0x3F66, 
+            0x6563, 0x0033, 0x0000, 0x0000, 0x0000, 0x3E80, 0x0000, 0x3E80, 
             0x0000, 0x3F80, 0x0000, 0x0000, 0x005C, 0x0015, 0x0000, 0x766F, 
             0x7265, 0x0000, 0x8000, 0x003F, 0xA000, 0x0040, 0x4000, 0x0040, 
             0x8000, 0x003F, 0x8000, 0x5C3F, 0x1600, 0x0000, 0x7300, 0x6F6D, 
@@ -1539,9 +1554,9 @@ template <int NV> struct instance: public higain_impl::higain_t_<NV>
 		this->setParameterT(15, 0.79);
 		this->setParameterT(16, 8.);
 		this->setParameterT(17, 1.);
-		this->setParameterT(18, 0.95);
-		this->setParameterT(19, 0.86);
-		this->setParameterT(20, 0.9);
+		this->setParameterT(18, 0.25);
+		this->setParameterT(19, 0.);
+		this->setParameterT(20, 0.25);
 		this->setParameterT(21, 3.);
 		this->setParameterT(22, 0.151155);
 		this->setParameterT(23, 0.153702);
