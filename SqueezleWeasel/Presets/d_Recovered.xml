@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="d" Bypassed="0" Gain="1.0" Balance="0.0"
+           VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0" packageName=""
+           BuildVersion="650">
+  <EditorStates BodyShown="0" Visible="1" Solo="0" Folded="1"/>
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0" Script="Content.makeFrontInterface(600, 600);function onNoteOn()&#10;{&#10;&#9;&#10;}&#10; function onNoteOff()&#10;{&#10;&#9;&#10;}&#10; function onController()&#10;{&#10;&#9;&#10;}&#10; function onTimer()&#10;{&#10;&#9;&#10;}&#10; function onControl(number, value)&#10;{&#10;&#9;&#10;}&#10; ">
+          <EditorStates BodyShown="1" Visible="1" Solo="0" contentShown="1" onInitOpen="1"/>
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptSlider" id="InputCut" value="0.8100000023841858"/>
+            <Control type="ScriptSlider" id="InputQ" value="0.0"/>
+            <Control type="ScriptSlider" id="InputMod" value="0.02999999932944775"/>
+            <Control type="ScriptSlider" id="OutMod" value="0.0"/>
+            <Control type="ScriptSlider" id="OutQ" value="0.0"/>
+            <Control type="ScriptSlider" id="OutCut" value="1.0"/>
+            <Control type="ScriptSlider" id="InputGain" value="56.95000076293945"/>
+            <Control type="ScriptSlider" id="Threshold" value="-13.49999904632568"/>
+            <Control type="ScriptSlider" id="Threshold1" value="68.0"/>
+            <Control type="ScriptSlider" id="Release" value="16.0"/>
+            <Control type="ScriptSlider" id="Release1" value="-0.9999985098838806"/>
+            <Control type="ScriptSlider" id="Release2" value="0.0"/>
+            <Control type="ScriptSlider" id="Release3" value="0.0"/>
+            <Control type="ScriptSlider" id="Release4" value="18.0"/>
+            <Control type="ScriptComboBox" id="InputFilterMode" value="1.0"/>
+            <Control type="ScriptComboBox" id="ComboBox2" value="1.0"/>
+            <Control type="ScriptSlider" id="Release5" value="3.0"/>
+            <Control type="ScriptSlider" id="EffectMix" value="1.0"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform1" value="0.0" data="/Users/rick/Downloads/RJ Electric IR Pack/Fender Pro Reverb/ROOM/JensenC12N_414_ROOMFAR1_dc.wav"
+                     rangeStart="0" rangeEnd="13813"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform2" value="0.0" data="/Users/rick/Downloads/RJ Electric IR Pack/Fender Pro Reverb/ROOM/JensenC12N_414_ROOMFAR2_dc.wav"
+                     rangeStart="0" rangeEnd="13906"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform3" value="0.0" data="/Users/rick/Downloads/RJ Electric IR Pack/Marshall 1960BHW/SM7B/1960HW_SM7B_ALBINI_2_dc.wav"
+                     rangeStart="0" rangeEnd="66151"/>
+            <Control type="ScriptSlider" id="Space1" value="0.4000000059604645"/>
+            <Control type="ScriptSlider" id="Space2" value="0.2099999934434891"/>
+            <Control type="ScriptSlider" id="Space3" value="0.5"/>
+          </Content>
+          <UIData>
+            <ContentProperties DeviceType="Desktop">
+              <Component type="ScriptSlider" id="InputCut" x="30.0" y="120.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Input Cutoff"
+                         processorId="Script FX1" parameterId="InputFilterCut"/>
+              <Component type="ScriptSlider" id="InputQ" x="180.0" y="120.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Input Q"
+                         processorId="Script FX1" parameterId="InputFilterq"/>
+              <Component type="ScriptSlider" id="InputMod" x="330.0" y="120.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Input Mod"
+                         min="-1.0" middlePosition="0.0" processorId="Script FX1" parameterId="InMod"/>
+              <Component type="ScriptSlider" id="OutMod" x="325.0" y="310.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Output Mod"
+                         min="-1.0" middlePosition="0.0" processorId="Script FX1" parameterId="OutMod"/>
+              <Component type="ScriptSlider" id="OutQ" x="175.0" y="310.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Output Q"
+                         processorId="Script FX1" parameterId="OutputQ"/>
+              <Component type="ScriptSlider" id="OutCut" x="25.0" y="310.0" style="Horizontal"
+                         width="140.0" height="20.0" isPluginParameter="1" pluginParameterName="Input Cutoff"
+                         processorId="Script FX1" parameterId="OutputCut"/>
+              <Component type="ScriptSlider" id="InputGain" x="30.0" y="40.0" pluginParameterName="Input Gain"
+                         isPluginParameter="1" max="64.0" middlePosition="32.0" suffix="dB"
+                         processorId="Script FX1" parameterId="Input"/>
+              <Component type="ScriptSlider" id="Threshold" x="30.0" y="182.0" pluginParameterName="Threshold"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Thresh"
+                         mode="Decibel" min="-100.0" max="0.0" stepSize="0.1000000014901161"
+                         suffix=" dB" middlePosition="-18.0"/>
+              <Component type="ScriptSlider" id="Threshold1" x="180.0" y="182.0" pluginParameterName="Attack"
+                         isPluginParameter="1" text="Attack" processorId="Script FX1"
+                         parameterId="Attk" mode="Time" max="250.0" stepSize="1.0" suffix=" ms"
+                         middlePosition="125.0"/>
+              <Component type="ScriptSlider" id="Release" x="36.0" y="243.0" pluginParameterName="Release"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Rel"
+                         mode="Time" max="250.0" stepSize="1.0" suffix=" ms" middlePosition="125.0"/>
+              <Component type="ScriptSlider" id="Release1" x="331.0" y="350.0" pluginParameterName="Output Gain"
+                         isPluginParameter="1" text="Output Gain" processorId="Script FX1"
+                         mode="Decibel" min="-100.0" max="24.0" stepSize="0.1000000014901161"
+                         suffix=" dB" middlePosition="0.0" parameterId="Out"/>
+              <Component type="ScriptSlider" id="Release2" x="182.0" y="40.0" pluginParameterName="Reverb Mix"
+                         isPluginParameter="1" text="ReverbMix" processorId="Script FX1"
+                         parameterId="verb"/>
+              <Component type="ScriptSlider" id="Release3" x="30.0" y="350.0" pluginParameterName="Scramble"
+                         isPluginParameter="1" text="Scramble" processorId="Script FX1"
+                         parameterId="Scramble"/>
+              <Component type="ScriptSlider" id="Release4" x="176.0" y="350.0" pluginParameterName="Scramble Rate"
+                         isPluginParameter="1" text="Scramble Rate" processorId="Script FX1"
+                         parameterId="scramblerate" max="18.0" stepSize="1.0" middlePosition="9.0"/>
+              <Component type="ScriptPanel" id="Panel1" x="340.0" y="170.0" width="130.0"
+                         height="120.0" processorId="Script FX1"/>
+              <Component type="ScriptComboBox" id="InputFilterMode" x="484.0" y="120.0"
+                         max="4" width="30.0" height="20.0" items="LP&#10;HP&#10;BP&#10;Rate"
+                         isPluginParameter="1" pluginParameterName="Input Filter Mode"
+                         text="Input Filter Mode" processorId="Script FX1" parameterId="OutPutMode"/>
+              <Component type="ScriptComboBox" id="ComboBox2" x="480.0" y="310.0" max="4"
+                         width="30.0" height="20.0" items="LP&#10;HP&#10;BP&#10;Rate"
+                         pluginParameterName="Output Filter Mode" isPluginParameter="1"
+                         text="Output Filter Mode" processorId="Script FX1" parameterId="OutPutMode"/>
+              <Component type="ScriptSlider" id="Release5" x="180.0" y="243.0" pluginParameterName="Ratio"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Ratio"
+                         text="Ratio" min="1.0" max="32.0" stepSize="0.1000000014901161"/>
+              <Component type="ScriptSlider" id="EffectMix" x="343.0" y="41.0" pluginParameterName="Mix"
+                         isPluginParameter="1" text="Effect Mix" processorId="Script FX1"
+                         parameterId="mix"/>
+              <Component type="ScriptAudioWaveform" id="AudioWaveform1" x="50.0" y="420.0"
+                         processorId="Script FX1" width="140.0" height="80.0"/>
+              <Component type="ScriptAudioWaveform" id="AudioWaveform2" x="220.0" y="420.0"
+                         processorId="Script FX1" sampleIndex="1" width="150.0" height="70.0"/>
+              <Component type="ScriptAudioWaveform" id="AudioWaveform3" x="410.0" y="420.0"
+                         processorId="Script FX1" sampleIndex="2" width="140.0" height="80.0"/>
+              <Component type="ScriptSlider" id="Space1" x="69.0" y="8.0" pluginParameterName="Space1"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Space1"
+                         width="120.0" height="30.0"/>
+              <Component type="ScriptSlider" id="Space2" x="60.0" y="150.0" pluginParameterName="Space2"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Space2"
+                         width="120.0" height="30.0"/>
+              <Component type="ScriptSlider" id="Space3" x="360.0" y="330.0" pluginParameterName="Space3"
+                         isPluginParameter="1" processorId="Script FX1" parameterId="Space3"
+                         width="120.0" height="30.0"/>
+            </ContentProperties>
+          </UIData>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+      <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.0">
+      <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="0" Gain="1.0"
+               Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               SyncMode="1.0" PitchTracking="0.0" LoopEnabled="1.0" RootNote="64.0"
+               SampleStartMod="0.0" Reversed="0.0" FileName="/Library/Application Support/modularsamples/OiGrandad2/AudioFiles/Loops/break.wav"
+               min="0" max="1084235" loopStart="0" loopEnd="1084235">
+      <EditorStates BodyShown="1" Visible="1" Solo="0" Folded="1"/>
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <EditorStates BodyShown="1" Visible="1" Solo="0"/>
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <EditorStates BodyShown="1" Visible="0" Solo="0"/>
+          <ChildProcessors>
+            <Processor Type="ScriptFX" ID="Script FX1" Bypassed="1" NumSliderPacks="6"
+                       NumAudioFiles="3" NumDisplayBuffers="3" Script=" function prepareToPlay(sampleRate, blockSize)&#10;{&#10;&#9;&#10;}&#10; function processBlock(channels)&#10;{&#10;&#9;&#10;}&#10; function onControl(number, value)&#10;{&#10;&#9;&#10;}&#10; ">
+              <EditorStates BodyShown="1" Visible="1" Solo="0"/>
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+              <Content/>
+              <Networks>
+                <Network ID="higain" Version="0.0.0" AllowCompilation="1"/>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+            <Processor Type="ScriptFX" ID="Script FX2" Bypassed="0" NumSliderPacks="3"
+                       Script=" function prepareToPlay(sampleRate, blockSize)&#10;{&#10;&#9;&#10;}&#10; function processBlock(channels)&#10;{&#10;&#9;&#10;}&#10; function onControl(number, value)&#10;{&#10;&#9;&#10;}&#10; ">
+              <EditorStates BodyShown="1" Visible="1" Solo="0"/>
+              <ChildProcessors/>
+              <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+              <Content/>
+              <Networks>
+                <Network ID="bigspec" AllowCompilation="1" Version="0.0.0"/>
+              </Networks>
+              <UIData>
+                <ContentProperties DeviceType="Desktop"/>
+              </UIData>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

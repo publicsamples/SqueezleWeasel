@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Processor Type="SynthChain" ID="d" Bypassed="0" Gain="1.0" Balance="0.0"
+           VoiceLimit="64.0" KillFadeTime="20.0" IconColour="0" packageName=""
+           BuildVersion="650">
+  <ChildProcessors>
+    <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="ScriptProcessor" ID="Interface" Bypassed="0">
+          <ChildProcessors/>
+          <Content>
+            <Control type="ScriptPanel" id="Effect" value="0.0"/>
+            <Control type="ScriptSlider" id="InputCut" value="0.01999999955296516"/>
+            <Control type="ScriptSlider" id="InputQ" value="0.1800000071525574"/>
+            <Control type="ScriptSlider" id="InputMod" value="-0.05999999865889549"/>
+            <Control type="ScriptComboBox" id="InputFilterMode" value="1.0"/>
+            <Control type="ScriptSlider" id="Space1" value="0.7099999785423279"/>
+            <Control type="ScriptSlider" id="Space2" value="0.0"/>
+            <Control type="ScriptSlider" id="Space3" value="0.009999999776482582"/>
+            <Control type="ScriptSlider" id="InputGain" value="47.2400016784668"/>
+            <Control type="ScriptSlider" id="Release2" value="1.0"/>
+            <Control type="ScriptSlider" id="EffectMix" value="1.0"/>
+            <Control type="ScriptSlider" id="InputCut1" value="0.9300000071525574"/>
+            <Control type="ScriptSlider" id="InputQ1" value="0.7200000286102295"/>
+            <Control type="ScriptSlider" id="InputMod1" value="0.6299999952316284"/>
+            <Control type="ScriptComboBox" id="InputFilterMode1" value="4.0"/>
+            <Control type="ScriptSlider" id="Threshold" value="-100.0"/>
+            <Control type="ScriptSlider" id="Threshold1" value="112.0"/>
+            <Control type="ScriptSlider" id="Release" value="0.0"/>
+            <Control type="ScriptSlider" id="Release5" value="1.0"/>
+            <Control type="ScriptSlider" id="Out" value="-2.79999852180481"/>
+            <Control type="ScriptSlider" id="Release3" value="0.0"/>
+            <Control type="ScriptSlider" id="Srate" value="9.0"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform1" value="0.0" data="{PROJECT_FOLDER}Resonant Ping 12.wav"
+                     rangeStart="0" rangeEnd="95999"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform2" value="0.0" data="{PROJECT_FOLDER}Cruise Ship Cabin HVAC Ceiling Plate.wav"
+                     rangeStart="0" rangeEnd="363163"/>
+            <Control type="ScriptAudioWaveform" id="AudioWaveform3" value="0.0" data="{PROJECT_FOLDER}Light Switch Flick 4.wav"
+                     rangeStart="0" rangeEnd="17476"/>
+            <Control type="ScriptSlider" id="FilterSmooth1" value="0.05000000074505806"/>
+            <Control type="ScriptSlider" id="FilterSmooth2" value="0.07000000029802322"/>
+            <Control type="ScriptComboBox" id="ComboBox1" value="4.0"/>
+            <Control type="ScriptButton" id="ShowSettings" value="1.0"/>
+          </Content>
+          <UIData Source="dUIData"/>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="1" Intensity="0.0">
+      <ChildProcessors/>
+    </Processor>
+    <Processor Type="EffectChain" ID="FX" Bypassed="0">
+      <ChildProcessors>
+        <Processor Type="Hardcoded Master FX" ID="Script FX1" Bypassed="0" Network="higain"
+                   Thresh="-100.0" Attk="112.0" Rel="0.0" Ratio="1.0" Input="47.2400016784668"
+                   Out="-2.79999852180481" Scramble="0.0" InputFilter="1.0" InputFilterCut="0.01999999955296516"
+                   InputFilterq="0.1800000071525574" OutPutMode="4.0" OutputCut="0.9300000071525574"
+                   OutputQ="0.7200000286102295" InMod="-0.05999999865889549" OutMod="0.6299999952316284"
+                   verb="1.0" scramblerate="9.0" mix="1.0" Space1="0.7099999785423279"
+                   Space2="0.0" Space3="0.009999999776482582" over="4.0" smooth1="0.05000000074505806"
+                   smooth2="0.07000000029802322">
+          <ChildProcessors/>
+          <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+          <AudioFiles>
+            <AudioFile EmbeddedData="{PROJECT_FOLDER}Resonant Ping 12.wav" MinValue="0"
+                       MaxValue="95999"/>
+            <AudioFile EmbeddedData="{PROJECT_FOLDER}Cruise Ship Cabin HVAC Ceiling Plate.wav"
+                       MinValue="0" MaxValue="363163"/>
+            <AudioFile EmbeddedData="{PROJECT_FOLDER}Light Switch Flick 4.wav" MinValue="0"
+                       MaxValue="17476"/>
+          </AudioFiles>
+        </Processor>
+      </ChildProcessors>
+    </Processor>
+    <Processor Type="AudioLooper" ID="Audio Loop Player1" Bypassed="1" Gain="1.0"
+               Balance="0.0" VoiceLimit="256.0" KillFadeTime="20.0" IconColour="0"
+               SyncMode="1.0" PitchTracking="0.0" LoopEnabled="1.0" RootNote="64.0"
+               SampleStartMod="0.0" Reversed="0.0" FileName="" min="0" max="0"
+               loopStart="0" loopEnd="0">
+      <ChildProcessors>
+        <Processor Type="MidiProcessorChain" ID="Midi Processor" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="GainModulation" Bypassed="0" Intensity="1.0">
+          <ChildProcessors>
+            <Processor Type="SimpleEnvelope" ID="DefaultEnvelope1" Bypassed="0" Monophonic="0.0"
+                       Retrigger="1.0" Intensity="1.0" Attack="5.0" Release="10.0" LinearMode="1.0">
+              <ChildProcessors>
+                <Processor Type="ModulatorChain" ID="Attack Time Modulation" Bypassed="0"
+                           Intensity="1.0">
+                  <ChildProcessors/>
+                </Processor>
+              </ChildProcessors>
+            </Processor>
+          </ChildProcessors>
+        </Processor>
+        <Processor Type="ModulatorChain" ID="PitchModulation" Bypassed="0" Intensity="0.0">
+          <ChildProcessors/>
+        </Processor>
+        <Processor Type="EffectChain" ID="FX" Bypassed="0">
+          <ChildProcessors/>
+        </Processor>
+      </ChildProcessors>
+      <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+    </Processor>
+  </ChildProcessors>
+  <RoutingMatrix NumSourceChannels="2" Channel0="0" Send0="-1" Channel1="1" Send1="-1"/>
+  <macro_controls>
+    <macro name="Macro 1" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 2" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 3" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 4" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 5" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 6" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 7" value="0.0" midi_cc="-1"/>
+    <macro name="Macro 8" value="0.0" midi_cc="-1"/>
+  </macro_controls>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Processor>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Preset Version="1.0.0">
+  <Content Processor="Interface">
+    <Control type="ScriptSlider" id="InputCut" value="0.5600000023841858"/>
+    <Control type="ScriptSlider" id="InputQ" value="0.0"/>
+    <Control type="ScriptSlider" id="InputMod" value="1.0"/>
+    <Control type="ScriptComboBox" id="InputFilterMode" value="1.0"/>
+    <Control type="ScriptSlider" id="Space1" value="0.09000000357627869"/>
+    <Control type="ScriptSlider" id="Space2" value="0.0"/>
+    <Control type="ScriptSlider" id="Space3" value="0.2899999916553497"/>
+    <Control type="ScriptSlider" id="InputGain" value="45.47999954223633"/>
+    <Control type="ScriptSlider" id="Release2" value="1.0"/>
+    <Control type="ScriptSlider" id="EffectMix" value="1.0"/>
+    <Control type="ScriptSlider" id="InputCut1" value="0.7300000190734863"/>
+    <Control type="ScriptSlider" id="InputQ1" value="0.0"/>
+    <Control type="ScriptSlider" id="InputMod1" value="-1.0"/>
+    <Control type="ScriptComboBox" id="InputFilterMode1" value="4.0"/>
+    <Control type="ScriptSlider" id="Threshold" value="0.0"/>
+    <Control type="ScriptSlider" id="Threshold1" value="84.0"/>
+    <Control type="ScriptSlider" id="Release" value="117.0"/>
+    <Control type="ScriptSlider" id="Release5" value="1.0"/>
+    <Control type="ScriptSlider" id="Out" value="7.20000171661377"/>
+    <Control type="ScriptSlider" id="Release3" value="1.0"/>
+    <Control type="ScriptSlider" id="Srate" value="9.0"/>
+    <Control type="ScriptAudioWaveform" id="AudioWaveform1" value="0.0" data="/Users/rick/Documents/GitHub/IR-Library/Springs/Reverb Amp 500/Reverb Amp 500 Impacts/Spring Hard Impact.wav"
+             rangeStart="0" rangeEnd="268892"/>
+    <Control type="ScriptAudioWaveform" id="AudioWaveform2" value="0.0" data="/Users/rick/Documents/GitHub/IR-Library/Springs/Reverb Amp 500/Reverb Amp 500 Sweeps/Spring True Stereo 1.wav"
+             rangeStart="0" rangeEnd="479999"/>
+    <Control type="ScriptAudioWaveform" id="AudioWaveform3" value="0.0" data="/Users/rick/Downloads/RJ Electric IR Pack/Fender Pro Reverb/414/JensenC12N_414_REAR2_dc.wav"
+             rangeStart="0" rangeEnd="12935"/>
+    <Control type="ScriptSlider" id="FilterSmooth1" value="0.1511548906564713"/>
+    <Control type="ScriptSlider" id="FilterSmooth2" value="0.1537024527788162"/>
+    <Control type="ScriptButton" id="ShowSettings" value="1.0"/>
+  </Content>
+  <MidiAutomation/>
+  <MPEData Enabled="0"/>
+</Preset>
